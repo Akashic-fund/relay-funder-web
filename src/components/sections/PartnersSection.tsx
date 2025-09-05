@@ -1,54 +1,47 @@
-import refuniteLogo from '@/assets/logos/refunite.png';
-import celoLogo from '@/assets/logos/celo.png';
-import operaLogo from '@/assets/logos/opera.png';
-import gitcoinLogo from '@/assets/logos/gitcoin.png';
+import refuniteLogo from '@/assets/logos/logo-refunite.png';
+import celoLogo from '@/assets/logos/logo-celo.png';
+import operaLogo from '@/assets/logos/logo-opera-mini.png';
+import gitcoinLogo from '@/assets/logos/logo-gitcoin.png';
+import humanTechLogo from '@/assets/logos/logo-human-tech.png';
+import grassrootsEconomicsLogo from '@/assets/logos/logo-grassroots-economics.png';
+import ccProtocolLogo from '@/assets/logos/logo-cc-protocol.jpeg';
+import filecoinFoundationLogo from '@/assets/logos/logo-filecoin-foundation.png';
 
 const partners = [
   { 
-    name: 'Refunite', 
-    logo: refuniteLogo,
-    role: 'Founding Partner - Community Leader Network',
-    featured: true
+    name: 'CC Protocol', 
+    logo: ccProtocolLogo,
+    role: 'Kickstarted supported crowdfunding infrastructure'
   },
   { 
     name: 'Celo', 
     logo: celoLogo,
-    role: 'Mobile-first blockchain infrastructure'
+    role: 'Blockchain infrastructure'
   },
   { 
-    name: 'Opera', 
+    name: 'human.tech', 
+    logo: humanTechLogo,
+    role: 'Zero-knowledge identity verification'
+  },
+  { 
+    name: 'Grassroots Economics', 
+    logo: grassrootsEconomicsLogo,
+    role: 'Community currency systems'
+  },
+  { 
+    name: 'Opera Mini', 
     logo: operaLogo,
     role: 'MiniPay wallet distribution'
   },
   { 
+    name: 'Filecoin Foundation', 
+    logo: filecoinFoundationLogo,
+    role: 'IPFS long-term storage'
+  },
+  { 
     name: 'Gitcoin', 
     logo: gitcoinLogo,
-    role: 'Quadratic funding engine'
-  },
-  { 
-    name: 'human.tech', 
-    logo: null,
-    role: 'RelayID identity verification'
-  },
-  { 
-    name: 'CoalaPay', 
-    logo: null,
-    role: 'Payment infrastructure'
-  },
-  { 
-    name: 'Grassroots Economics', 
-    logo: null,
-    role: 'Community currency systems'
-  },
-  { 
-    name: 'Kickstarter', 
-    logo: null,
-    role: 'CC Protocol integration'
-  },
-  { 
-    name: 'Filecoin Foundation', 
-    logo: null,
-    role: 'IPFS long-term storage'
+    role: 'Quadratic funding and matching'
   },
 ];
 
@@ -59,48 +52,45 @@ const PartnersSection = () => {
         <div className="text-center mb-16 relative z-10">
           <div className="text-mono-accent mb-4">Trusted Partners</div>
           <h2 className="text-section-title font-display text-text-primary">
-            Collaborative ecosystem for displaced communities
+            Collaborative ecosystem for refugees and displaced communities
           </h2>
         </div>
         
         {/* Featured partner */}
         <div className="mb-16 relative z-10">
           <div className="max-w-lg mx-auto web3-card p-8 text-center hover-bio">
-            <div className="w-20 h-20 mx-auto mb-6 quantum-surface flex items-center justify-center">
+            <div className="w-50 h-30 mx-auto mb-6 flex items-center justify-center">
               <img 
                 src={refuniteLogo} 
                 alt="Refunite logo" 
-                className="w-14 h-14 object-contain"
+                className="w-50 h-30 object-contain"
               />
             </div>
-            <h3 className="font-display font-medium text-text-primary mb-3 text-xl">
-              Refunite
-            </h3>
             <div className="text-mono-accent mb-4">
               Founding Partner
             </div>
             <p className="text-text-secondary leading-relaxed">
-              Community Leader Network with <strong className="text-quantum">100,000+ trusted leaders</strong> and <strong className="text-bio">100M+ reach</strong> across displaced communities worldwide
+              Community Leader Network with <strong className="text-quantum">100,000+ trusted leaders</strong> and <strong className="text-bio">100M+ reach</strong> across refugees and displaced communities worldwide
             </p>
           </div>
         </div>
 
         {/* Partner grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 relative z-10">
-          {partners.slice(1).map((partner) => (
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-8 relative z-10 justify-items-center">
+          {partners.map((partner) => (
             <div 
               key={partner.name}
               className="text-center group"
             >
-              <div className="w-16 h-16 mx-auto mb-4 quantum-surface flex items-center justify-center group-hover:border-quantum hover-quantum transition-colors">
+              <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center transition-colors">
                 {partner.logo ? (
                   <img 
                     src={partner.logo} 
                     alt={`${partner.name} logo`} 
-                    className="w-10 h-10 object-contain"
+                    className="w-16 h-16 object-contain rounded-full"
                   />
                 ) : (
-                  <span className="text-quantum text-lg font-bold font-display">
+                  <span className="text-quantum text-xl font-bold font-display">
                     {partner.name.charAt(0)}
                   </span>
                 )}
