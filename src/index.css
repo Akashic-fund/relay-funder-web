@@ -1,53 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 /* Relay Design System - Web3 × Humanitarian Aesthetic */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
 
 @layer base {
   :root {
-    /* Base - Deep space meets earth */
-    --background: 215 25% 8%;
-    --foreground: 210 15% 95%;
-    --surface: 215 20% 12%;
-    --surface-alt: 215 15% 16%;
-    --surface-elevated: 215 20% 20%;
+    /* Base - Light elegant meets earth */
+    --background: 0 0% 98%;
+    --foreground: 220 15% 15%;
+    --surface: 210 20% 95%;
+    --surface-alt: 210 15% 92%;
+    --surface-elevated: 210 20% 88%;
 
-    /* Typography hierarchy */
-    --text-primary: 210 15% 95%;
-    --text-secondary: 210 12% 75%;
-    --text-muted: 210 8% 55%;
-    --text-subtle: 210 5% 35%;
+    /* Typography hierarchy - Enhanced contrast */
+    --text-primary: 220 20% 8%;
+    --text-secondary: 220 15% 25%;
+    --text-muted: 220 12% 40%;
+    --text-subtle: 220 8% 60%;
 
-    /* Web3 × Humanitarian palette */
-    --quantum-blue: 210 100% 65%; /* Primary tech */
-    --bio-green: 150 65% 55%; /* Life/growth */
-    --solar-orange: 25 95% 65%; /* Hope/energy */
-    --accent: 210 100% 65%;
-    --accent-light: 210 85% 75%;
-    --accent-dark: 210 100% 55%;
+    /* Web3 × Humanitarian palette - Enhanced contrast */
+    --quantum-blue: 210 100% 45%; /* Primary tech - darker for better contrast */
+    --bio-green: 150 65% 40%; /* Life/growth - darker for better contrast */
+    --solar-orange: 25 95% 50%; /* Hope/energy - darker for better contrast */
+    --accent: 210 100% 45%;
+    --accent-light: 210 85% 60%;
+    --accent-dark: 210 100% 35%;
     
-    /* Interactive states */
-    --hover: 210 100% 70%;
-    --active: 210 100% 50%;
-    --focus: 210 90% 65%;
+    /* Interactive states - Enhanced contrast */
+    --hover: 210 100% 40%;
+    --active: 210 100% 35%;
+    --focus: 210 90% 45%;
 
     /* Component tokens */
-    --card: 215 20% 14%;
-    --card-foreground: 210 15% 95%;
-    --border: 215 15% 25%;
-    --border-light: 215 10% 30%;
+    --card: 210 20% 96%;
+    --card-foreground: 220 15% 15%;
+    --border: 220 15% 85%;
+    --border-light: 220 10% 88%;
     --ring: 210 100% 65%;
 
-    /* Web3-style shadows and glows */
-    --shadow-subtle: 0 1px 3px 0 hsl(215 25% 8% / 0.5);
-    --shadow-medium: 0 4px 12px 0 hsl(215 25% 8% / 0.4), 0 0 0 1px hsl(210 100% 65% / 0.05);
-    --shadow-large: 0 12px 24px -4px hsl(215 25% 8% / 0.4), 0 0 0 1px hsl(210 100% 65% / 0.1);
-    --shadow-glow: 0 0 20px hsl(210 100% 65% / 0.3), 0 0 40px hsl(210 100% 65% / 0.1);
-    --shadow-glow-green: 0 0 20px hsl(150 65% 55% / 0.3);
-    --shadow-glow-orange: 0 0 20px hsl(25 95% 65% / 0.3);
+    /* Light-style shadows and glows */
+    --shadow-subtle: 0 1px 3px 0 hsl(220 15% 15% / 0.1);
+    --shadow-medium: 0 4px 12px 0 hsl(220 15% 15% / 0.08), 0 0 0 1px hsl(210 100% 65% / 0.05);
+    --shadow-large: 0 12px 24px -4px hsl(220 15% 15% / 0.08), 0 0 0 1px hsl(210 100% 65% / 0.1);
+    --shadow-glow: 0 0 20px hsl(210 100% 65% / 0.2), 0 0 40px hsl(210 100% 65% / 0.08);
+    --shadow-glow-green: 0 0 20px hsl(150 65% 55% / 0.2);
+    --shadow-glow-orange: 0 0 20px hsl(25 95% 65% / 0.2);
 
     /* Animation and motion */
     --transition-base: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -170,7 +168,7 @@
   }
   
   .text-section-title {
-    @apply text-2xl md:text-4xl font-medium leading-tight font-display;
+    @apply text-2xl md:text-4xl font-semibold leading-tight font-display;
   }
 
   .text-mono-accent {
@@ -204,19 +202,28 @@
 
   /* Original Button Variants */
   .btn-quantum {
-    @apply bg-gradient-to-r from-quantum to-accent text-background px-6 py-3 rounded-xl font-medium interactive-base hover:shadow-glow;
+    @apply bg-gradient-to-r from-quantum to-accent text-white px-6 py-3 rounded-xl font-semibold interactive-base hover:shadow-glow;
   }
 
   .btn-bio {
-    @apply bg-gradient-to-r from-bio to-green-400 text-background px-6 py-3 rounded-xl font-medium interactive-base hover:shadow-glow-green;
+    @apply bg-gradient-to-r from-bio to-green-400 text-white px-6 py-3 rounded-xl font-semibold interactive-base hover:shadow-glow-green;
   }
 
   .btn-solar {
-    @apply bg-gradient-to-r from-solar to-yellow-400 text-background px-6 py-3 rounded-xl font-medium interactive-base hover:shadow-glow-orange;
+    @apply bg-gradient-to-r from-solar to-yellow-400 text-white px-6 py-3 rounded-xl font-semibold interactive-base hover:shadow-glow-orange;
   }
 
   .btn-ghost {
-    @apply border border-quantum text-quantum hover:bg-quantum hover:text-background px-6 py-3 rounded-xl font-medium interactive-base;
+    @apply border-2 border-quantum text-quantum hover:bg-quantum hover:text-white px-6 py-3 rounded-xl font-semibold interactive-base;
+  }
+
+  /* Enhanced disabled states for better contrast */
+  .btn-quantum.opacity-60 {
+    @apply bg-muted text-text-primary border border-border cursor-not-allowed;
+  }
+
+  .btn-quantum.opacity-60:hover {
+    @apply bg-muted text-text-primary shadow-none;
   }
 
   /* Original Geometric Elements */
@@ -235,7 +242,7 @@
   }
 
   .quantum-surface {
-    @apply bg-surface-elevated border border-quantum/20 rounded-2xl;
+    @apply bg-surface-elevated border border-quantum/20 rounded-lg;
   }
 
   .bio-surface {

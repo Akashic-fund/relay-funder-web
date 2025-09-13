@@ -12,7 +12,7 @@ const Footer = () => {
             </h3>
             <p className="text-text-muted max-w-md">
               Community-driven crowdfunding for refugee and crisis-affected communities.
-              Pilots in Africa with Refunite. Supporters worldwide.
+              Pilots in Kenya and Uganda with Refunite. Supporters worldwide.
             </p>
           </div>
 
@@ -21,14 +21,9 @@ const Footer = () => {
             <h4 className="font-semibold text-text-primary mb-4">Platform</h4>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="https://app.relay.community"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-text-muted hover:text-accent interactive-base"
-                >
-                  Explore Projects
-                </a>
+                <div className="text-text-muted cursor-not-allowed">
+                  Explore Projects (Coming Soon)
+                </div>
               </li>
               <li>
                 <Link to="/partners" className="text-text-muted hover:text-accent interactive-base">
@@ -64,7 +59,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="mailto:hello@relay.community"
+                  href="mailto:info@relayfunder.com"
                   className="text-text-muted hover:text-accent interactive-base"
                 >
                   Contact
@@ -76,7 +71,7 @@ const Footer = () => {
 
         <div className="mt-8 pt-8 border-t border-border text-center">
           <p className="text-text-subtle text-sm">
-            © 2024 Relay. Building community power, one project at a time.
+            © {new Date().getFullYear()} Relay. Building community power, one project at a time.
           </p>
         </div>
       </div>
